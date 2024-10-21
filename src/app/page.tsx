@@ -27,8 +27,9 @@ function Page() {
 
   useEffect(() => {
     const updateStylesheet = () => {
-      console.log("Current window width:", window.innerWidth);
-      if (window.innerWidth <= 360) {
+      const currentWidth = window.innerWidth;
+      console.log("Current window width:", currentWidth);
+      if (currentWidth < 1280) {
         import("./styles/mobile.module.scss")
           .then((module) => {
             setStyles(module.default);
@@ -37,7 +38,7 @@ function Page() {
           .catch((error) =>
             console.error("Error loading mobile styles:", error)
           );
-      } else if (window.innerWidth >= 1280) {
+      } else if (currentWidth >= 1280) {
         import("./styles/page.module.scss")
           .then((module) => {
             setStyles(module.default);
@@ -48,6 +49,7 @@ function Page() {
           );
       } else {
         setStyles(null);
+        console.log("No specific styles loaded for width:", currentWidth);
       }
     };
 
