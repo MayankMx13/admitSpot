@@ -22,7 +22,7 @@ import ContactModal from "./ContactModel";
 import { useState, useEffect } from "react";
 
 type Styles = { [key: string]: string } | null;
-function page() {
+function Page() {
   const [styles, setStyles] = useState<Styles>(null);
 
   useEffect(() => {
@@ -365,4 +365,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
