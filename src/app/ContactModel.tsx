@@ -3,7 +3,12 @@ import styles from "./styles/contactmodel.module.scss";
 import Image from "next/image";
 import { MdOutlineContentCopy } from "react-icons/md";
 
-const ContactModal = ({ isOpen, onClose }) => {
+interface ContactModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (

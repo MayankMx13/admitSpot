@@ -27,12 +27,12 @@ function Page() {
 
   useEffect(() => {
     const updateStylesheet = () => {
-      console.log("Current window width:", window.innerWidth); // Log current width
+      console.log("Current window width:", window.innerWidth);
       if (window.innerWidth <= 360) {
         import("./styles/mobile.module.scss")
           .then((module) => {
             setStyles(module.default);
-            console.log("Loaded mobile styles:", module.default); // Log loaded styles
+            console.log("Loaded mobile styles:", module.default);
           })
           .catch((error) =>
             console.error("Error loading mobile styles:", error)
@@ -41,7 +41,7 @@ function Page() {
         import("./styles/page.module.scss")
           .then((module) => {
             setStyles(module.default);
-            console.log("Loaded desktop styles:", module.default); // Log loaded styles
+            console.log("Loaded desktop styles:", module.default);
           })
           .catch((error) =>
             console.error("Error loading desktop styles:", error)
