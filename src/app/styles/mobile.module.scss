@@ -3,6 +3,16 @@
 .contactPage {
     position: relative;
 
+    .top {
+
+        @include xl {
+            display: block;
+            background-color: #D3E2FF;
+            height: 75px;
+            width: 100%;
+            border-bottom: 1px solid #88B1FF;
+        }
+    }
 
 
     .heading {
@@ -23,6 +33,30 @@
             letter-spacing: 0.15000000596046448px;
             text-align: left;
         }
+
+        @include xl {
+            margin-top: 40px;
+            padding-left: 100px;
+            margin-bottom: 50px;
+            box-shadow: none;
+
+            h1 {
+
+                font-size: 40px;
+                font-weight: 600;
+                line-height: 60px;
+                letter-spacing: 0.15000000596046448px;
+                text-align: left;
+
+            }
+
+
+            .back {
+                display: none;
+            }
+        }
+
+
     }
 
     .main {
@@ -30,21 +64,38 @@
         flex-direction: column;
         padding-left: 20px;
         padding-right: 20px;
-
         gap: 30px;
+
+        @include md {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+
+
+        @include xl {
+            height: 1506.44px;
+            width: 100%;
+            padding-left: 100px;
+            padding-right: 100px;
+            gap: 100px;
+        }
+
+
 
         .upper {
             display: flex;
             flex-direction: column;
-
             gap: 16px;
 
             .description {
                 display: flex;
                 flex-direction: column;
-
                 gap: 16px;
                 margin-top: 30px;
+
+                @include xl {
+                    margin-bottom: 30px;
+                }
 
                 p {
 
@@ -53,6 +104,13 @@
                     line-height: 18px;
                     letter-spacing: 0.15000000596046448px;
                     text-align: left;
+
+                    @include xl {
+                        font-size: 24px;
+                        line-height: 36px;
+                        letter-spacing: -0.022em;
+                    }
+
 
                 }
 
@@ -65,6 +123,14 @@
                     text-align: left;
                     color: #025B95;
 
+                    @include xl {
+                        font-size: 20px;
+
+                        line-height: 30px;
+
+
+                    }
+
                 }
             }
 
@@ -74,8 +140,25 @@
                 width: auto;
                 gap: 15px;
 
+                @include xl {
+                    justify-content: space-between;
+                    gap: 40px;
+
+                }
+
+
                 h4 {
                     display: none;
+
+                    @include xl {
+                        display: block;
+                        font-size: 24px;
+                        font-weight: 500;
+                        line-height: 36px;
+                        letter-spacing: -0.022em;
+                        text-align: left;
+                        color: #061A31;
+                    }
                 }
 
                 h5 {
@@ -87,17 +170,36 @@
                     text-align: left;
                     color: #03396C;
 
+                    @include xl {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        letter-spacing: 0.15000000596046448px;
+                        text-align: left;
+                        color: #03396C;
+                    }
+
                 }
 
                 .card {
                     width: 100%;
                     min-width: 152px;
                     height: 90px;
-
                     border-radius: 8px;
                     border: 1px;
                     box-shadow: 0px 4px 10px 0px #AFC8F633;
                     padding: 10px;
+
+                    @include xl {
+                        width: 284px;
+                        height: 152px;
+                        padding: 20px;
+                        border: 1px solid#F5F5F5;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 8px #F5F5F5;
+                    }
+
+
 
                     .handles {
 
@@ -108,15 +210,25 @@
                         align-items: center;
                         justify-content: space-between;
 
+                        @include xl {
+                            display: none;
+                        }
+
                         .handle {
                             padding-right: 5px;
                             width: 33%;
                             border-right: 1px solid #f5f5f5;
+
                         }
 
                         .handleL {
                             width: 33%;
                             border: none;
+
+                            @include xl {
+                                display: none;
+                            }
+
                         }
                     }
 
@@ -124,6 +236,11 @@
                         width: 15px;
                         height: 15px;
                         border-radius: 0.81px;
+
+                        @include xl {
+                            height: 40px;
+                            width: 40px;
+                        }
                     }
 
                 }
@@ -138,6 +255,15 @@
                     box-shadow: 0px 4px 10px 0px #AFC8F633;
                     padding: 10px;
 
+                    @include xl {
+                        width: 311px;
+                        height: 152px;
+                        padding: 20px;
+                        border: 1px solid#F5F5F5;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 8px #F5F5F5;
+                    }
+
                     .handles {
 
                         width: auto;
@@ -148,18 +274,40 @@
                         align-items: center;
                         justify-content: center;
                         padding: 3px;
+
+                        @include xl {
+                            display: none;
+                        }
                     }
 
                     img {
                         width: 20px;
                         height: 13.4px;
                         border-radius: 0.81px;
+
+                        @include xl {
+                            width: 49.25px;
+                            height: 33px;
+                            top: 2px;
+
+                            border-radius: 2px;
+
+
+                        }
+
+
                     }
                 }
 
                 & div:last-child {
                     display: none;
+
+                    @include xl {
+                        display: block;
+                    }
                 }
+
+
             }
         }
 
@@ -172,6 +320,11 @@
             display: flex;
             justify-content: space-between;
 
+            @include xl {
+                height: 313.44px;
+
+
+            }
 
 
 
@@ -184,6 +337,19 @@
                 max-height: 196.4px;
                 padding: 20px 0px 20px 20px;
 
+                @include xl {
+
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 50px;
+                    padding: 0px;
+                    padding-left: 60px;
+                    width: 100%;
+                    max-height: 313px;
+
+
+                }
 
 
 
@@ -196,9 +362,21 @@
                     width: 100%;
                     order: 2;
 
+                    @include xl {
+                        order: 1;
+                        width: 298px;
+                        height: 233.44px;
+
+                    }
+
                     img {
                         width: 191.38px;
                         height: 149.92px;
+
+                        @include xl {
+                            width: 298px;
+                            height: 233.44px;
+                        }
                     }
 
 
@@ -209,6 +387,23 @@
                 .content {
                     order: 1;
 
+                    @include xl {
+                        order: 2;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: left;
+                        gap: 22px;
+                        margin-left: 50px;
+                        width: 555px;
+                        height: 100%;
+                        min-height: 197px;
+                        gap: 22px;
+                        opacity: 0px;
+
+
+                    }
+
 
 
                     h2 {
@@ -217,10 +412,25 @@
                         line-height: 21px;
                         letter-spacing: 0.15000000596046448px;
                         text-align: left;
+
+                        @include xl {
+                            height: 48px;
+                            font-size: 32px;
+                            line-height: 48px;
+                            letter-spacing: -0.022em;
+                        }
                     }
 
                     .dsp {
                         display: none;
+
+                        @include xl {
+                            display: block;
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 30px;
+                            letter-spacing: 0.15000000596046448px;
+                        }
                     }
 
                     .msp {
@@ -232,6 +442,10 @@
                         line-height: 18px;
                         letter-spacing: 0.15000000596046448px;
                         text-align: left;
+
+                        @include xl {
+                            display: none;
+                        }
 
                     }
 
@@ -245,6 +459,13 @@
                             line-height: 18px;
                             letter-spacing: 0.15000000596046448px;
                             text-align: left;
+
+                            @include xl {
+
+                                gap: 22px;
+                                align-items: center;
+
+                            }
                         }
                     }
                 }
@@ -260,6 +481,17 @@
                 height: 100%;
                 padding: 12px 10px 301.51px 10px;
 
+
+                @include xl {
+                    width: 95.96px;
+                    height: 100%;
+                    min-height: 313px;
+                    background-color: #88B1FF;
+                    position: relative;
+                }
+
+
+
                 svg {
                     transform: rotate(135deg);
                     color: #88B1FF;
@@ -270,6 +502,17 @@
                     gap: 0px;
                     border: 4px 0px 0px 0px;
                     opacity: 0px;
+
+
+                    @include xl {
+                        position: absolute;
+                        width: 35px;
+                        height: 30px;
+                        top: 52.75px;
+                        left: 29.96px;
+                        color: white;
+                        transform: rotate(135deg);
+                    }
 
 
                 }
@@ -283,34 +526,64 @@
         .bottom {
             display: flex;
             flex-direction: column;
-
             gap: 30px;
+
+            @include xl {
+                height: 605px;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 50px;
+            }
 
 
             .locationCards {
                 order: 1;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
 
+                gap: 10px;
 
-                gap: 20px;
+                @include sm {
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                }
+
+                @include xl {
+                    order: 2;
+                    height: 605px;
+                    width: 413px;
+                    gap: 50px;
+
+                }
 
                 .location {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-
                     gap: 10px;
                     font-size: 12px;
                     font-weight: 400;
                     line-height: 18px;
                     letter-spacing: 0.15000000596046448px;
                     text-align: left;
-
                     width: 100%;
                     max-width: 320px;
+
+                    @include xl {
+                        width: 100%;
+                        min-width: 413px;
+                        border: 1px solid #C2CAFA;
+                        height: 277.6px;
+                        padding: 25px 29.07px 25px 29.07px;
+                        border-radius: 14.54px;
+                        justify-content: center;
+                        align-items: center;
+
+                    }
+
+
 
                     h2 {
                         width: 320px;
@@ -319,7 +592,50 @@
                         line-height: 21px;
                         letter-spacing: 0.15000000596046448px;
                         text-align: left;
+
+
+                        @include xl {
+                            font-size: 24px;
+
+                            line-height: 36px;
+                            letter-spacing: -0.022em;
+                            text-align: center;
+                        }
                     }
+
+                    span {
+                        color: #061A31;
+
+                        @include xl {
+
+
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            letter-spacing: 0.15000000596046448px;
+                            text-align: left;
+
+                        }
+                    }
+
+
+                    p {
+                        @include xl {
+
+
+
+                            font-size: 14px;
+                            font-weight: 300;
+                            line-height: 21px;
+                            letter-spacing: 0.15000000596046448px;
+                            text-align: left;
+                            color: #858686;
+
+
+                        }
+                    }
+
+
 
                     .detail {
                         display: flex;
@@ -327,12 +643,28 @@
                         width: 293px;
                         height: 18px;
 
+                        @include xl {
+                            width: 100%;
+
+                        }
+
                         span {
 
                             display: flex;
                             gap: 6.68px;
                             align-items: center;
                             color: #03396C;
+
+                            @include xl {
+                                font-size: 12px;
+                                font-weight: 400;
+                                line-height: 18px;
+                                letter-spacing: 0.15000000596046448px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 7.27px;
+                            }
                         }
                     }
 
@@ -342,6 +674,11 @@
                         height: 78px;
                         border-radius: 8px;
                         object-fit: cover;
+
+                        @include xl {
+                            height: 67.6px;
+                            width: 354.85px;
+                        }
                     }
                 }
 
@@ -353,6 +690,12 @@
                 flex-direction: column;
                 align-items: center;
 
+                @include xl {
+                    order: 1;
+                }
+
+
+
 
                 h2 {
 
@@ -363,20 +706,36 @@
                     text-align: left;
                     margin-bottom: 20px;
 
+                    @include xl {
+                        display: none;
+                    }
+
                 }
 
                 form {
                     display: flex;
                     flex-direction: column;
-
                     width: auto;
                     max-width: 320px;
-                    height: fit-content;
+
+                    height: 100%;
                     padding: 25px;
                     gap: 20px;
                     border: 1px solid #D3E2FF;
                     background-color: #F2F4FF;
                     border-radius: 8px;
+
+
+                    @include xl {
+
+                        padding: 50px;
+                        height: 100%;
+                        min-width: 615px;
+                        width: 100%;
+                        border-radius: 8px;
+                        justify-content: space-between;
+
+                    }
 
                     input {
                         width: 100%;
@@ -385,7 +744,28 @@
                         border-radius: 4px;
                         border: 1px;
                         border: 1px solid #D3E2FF;
+
+                        @include xl {
+                            width: 100%;
+                            height: 55px;
+                            padding: 15.52px;
+                            gap: 15.52px;
+                            border-radius: 8px;
+                            border: 1.55px solid #88B1FF;
+                        }
+
+
                     }
+
+
+                    .errors {
+                        font-size: 10px;
+                        color: red;
+                        padding: 0px;
+                        margin: 0px;
+                        gap: 0px;
+                    }
+
 
 
                     button {
@@ -398,6 +778,22 @@
                         border: none;
                         background-color: #263238;
                         color: white;
+
+
+                        @include xl {
+                            width: 100%;
+                            height: 55px;
+                            padding: 15.52px;
+                            gap: 15.52px;
+                            border-radius: 8px;
+                            border: 1.55px;
+
+                            font-weight: 400;
+                            line-height: 23.28px;
+                            letter-spacing: 0.2327956259250641px;
+
+
+                        }
 
                         &::after {
                             content: "Request a callback";
@@ -422,13 +818,30 @@
 
     .footer {
 
-
-
         .banner {
 
+            .bannerSmall {
+                @include xl {
+                    display: none;
+                }
+
+                @include md {
+                    display: none;
+                }
+            }
 
             .bannerLarge {
                 display: none;
+
+                @include xl {
+                    display: block;
+                }
+
+                @include md {
+                    display: block;
+                }
+
+
             }
 
             .bannerSmall {
@@ -448,12 +861,23 @@
             min-height: 539.98px;
             padding-bottom: 20px;
             gap: 16px;
-
             background-color: #263238;
             color: white;
             display: flex;
             flex-direction: column;
             padding: 20px;
+
+            @include xl {
+
+                min-height: 297.12px;
+                width: 100%;
+                background-color: #263238;
+                padding: 40px 100px 60px 100px;
+                gap: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
 
 
 
@@ -504,8 +928,12 @@
                         height: 22px;
                         padding: 3px;
                         border-radius: 50%;
-                        background-color: black; // Make it circular
+                        background-color: #061A31;
 
+                    }
+
+                    @include xl {
+                        display: none;
                     }
                 }
 
@@ -537,6 +965,17 @@
                 letter-spacing: 0.15000000596046448px;
                 text-align: left;
 
+                @include xl {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    justify-content: space-between;
+                    width: 679.5px;
+                    height: 183.03px;
+                    gap: 40px;
+                }
+
+
 
                 .top_right {
                     display: flex;
@@ -560,6 +999,47 @@
 
                 .bottom_right {
                     display: none;
+
+                    @include xl {
+                        display: block;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+
+
+
+                    }
+
+                    .social {
+                        @include xl {
+                            display: flex;
+                            height: 26.03px;
+                            width: 309px;
+                            gap: 30.56px;
+                            color: white;
+                        }
+
+                        .logos {
+                            @include xl {
+
+
+                                width: 26.03px;
+                                height: 26.03px;
+                                padding: 5px;
+                                gap: 0px;
+                                border-radius: 50%;
+                                opacity: 0px;
+                                background-color: #061A31;
+                                ;
+
+
+
+
+                            }
+                        }
+
+
+                    }
 
                 }
 
